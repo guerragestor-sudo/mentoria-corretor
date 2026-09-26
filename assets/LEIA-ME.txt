@@ -1,5 +1,5 @@
-LANDING PAGE — ROTA DO GESTOR (Guerra · @guerragestor)
-======================================================
+LANDING PAGE — JORNADA DO CORRETOR (Guerra · @guerragestor)
+===========================================================
 
 1) VAGAS, DATA DE INÍCIO E HORÁRIO
 ----------------------------------
@@ -43,12 +43,12 @@ Opção mais simples (sem instalar nada):
   1. Acesse https://app.netlify.com/drop
   2. Arraste a pasta "mentoria-corretor" inteira para a página.
   3. Em "Site configuration > Change site name", escolha um nome,
-     ex.: rotadogestor → https://rotadogestor.netlify.app
+     ex.: jornadadocorretor → https://jornadadocorretor.netlify.app
 
 Depois de publicar:
   - No index.html, troque as duas linhas com "assets/og-image.jpg" (og:image e
     twitter:image) pelo endereço completo, ex.:
-    https://rotadogestor.netlify.app/assets/og-image.jpg
+    https://jornadadocorretor.netlify.app/assets/og-image.jpg
     (o WhatsApp só mostra a prévia com URL absoluta). Publique de novo.
   - Coloque o link na bio do Instagram.
 
@@ -61,4 +61,4 @@ Para atualizar depois: arraste a pasta de novo em "Deploys" no painel do site.
   e o conteúdo real do kit de scripts e do modelo de competição.
 - FAQ: "1 encontro por semana" (6 semanas, 6 módulos). Ajuste se for diferente.
 - Todos os botões levam para:
-  https://wa.me/5511945913535?text=Quero%20saber%20da%20Rota%20do%20Gestor
+  https://wa.me/5511945913535?text=Quero%20saber%20da%20Jornada%20do%20Corretor

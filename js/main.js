@@ -1,5 +1,5 @@
 /* =========================================================
-   Rota do Gestor · interações (sem bibliotecas)
+   Jornada do Corretor · interações (sem bibliotecas)
    ========================================================= */
 (() => {
   /* ============ EDITE AQUI ============
@@ -31,7 +31,7 @@
   // Ano no rodapé
   $$('.js-year').forEach((el) => (el.textContent = new Date().getFullYear()));
 
-  // Revelação suave ao rolar (e paradas da rota acendendo)
+  // Revelação suave ao rolar (e etapas da jornada acendendo)
   const revealables = $$('.reveal, .stop');
   if (hasIO) {
     const io = new IntersectionObserver((entries) => {

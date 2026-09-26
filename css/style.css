@@ -1,5 +1,5 @@
 /* =========================================================
-   Rota do Gestor · Landing page (mobile-first)
+   Jornada do Corretor · Landing page (mobile-first)
    Preto, dourado e branco · Archivo (uma família variável)
    ========================================================= */
 
@@ -92,7 +92,7 @@ h1, h2, h3 { margin: 0; }
 
 .h1 {
   font-weight: 900;
-  font-size: clamp(2.6rem, 11.4vw, 5.25rem);
+  font-size: clamp(2.1rem, 10.8vw, 5.25rem);
   line-height: .94;
   letter-spacing: -.005em;
   margin: 20px 0 18px;
@@ -188,6 +188,11 @@ h1, h2, h3 { margin: 0; }
 @keyframes shine {
   0% { transform: translateX(-130%); }
   22%, 100% { transform: translateX(130%); }
+}
+
+@media (max-width: 359px) {
+  .btn { gap: 8px; font-size: .95rem; }
+  .btn svg { width: 20px; height: 20px; }
 }
 
 .micro {
@@ -651,7 +656,7 @@ h1, h2, h3 { margin: 0; }
 }
 .quote footer::before { content: "— "; }
 
-/* ---------- Módulos (a rota) ---------- */
+/* ---------- Módulos (a jornada) ---------- */
 .section--route {
   background:
     radial-gradient(60% 40% at 50% 0%, rgba(214, 166, 70, .1), transparent 70%),
