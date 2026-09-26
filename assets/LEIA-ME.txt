@@ -45,14 +45,14 @@ Opção mais simples (sem instalar nada):
   3. Em "Site configuration > Change site name", escolha um nome,
      ex.: jornadadocorretor → https://jornadadocorretor.netlify.app
 
-Depois de publicar:
-  - No index.html, troque as duas linhas com "assets/og-image.jpg" (og:image e
-    twitter:image) pelo endereço completo, ex.:
-    https://jornadadocorretor.netlify.app/assets/og-image.jpg
-    (o WhatsApp só mostra a prévia com URL absoluta). Publique de novo.
+Site no ar: https://jornadadocorretor.netlify.app/
+  - A prévia do link (og:image) já aponta para o endereço completo.
+    Se trocar o nome do site na Netlify, atualize og:url, og:image,
+    twitter:image e canonical no index.html.
   - Coloque o link na bio do Instagram.
 
-Para atualizar depois: arraste a pasta de novo em "Deploys" no painel do site.
+Para atualizar depois: faça push na branch main do GitHub
+(guerragestor-sudo/mentoria-corretor) e a Netlify publica sozinha.
 
 
 4) PONTOS PARA O GUERRA REVISAR
