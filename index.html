@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rota do Gestor · Mentoria para corretores de imóveis | Guerra</title>
+  <meta name="description" content="Venda mais agora e trace o caminho do plantão até a gestão. Mentoria em grupo de 6 semanas, ao vivo, com Guerra: gerente de vendas que já treinou mais de 200 corretores no Minha Casa Minha Vida.">
+  <meta name="theme-color" content="#0B0B0C">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Rota do Gestor · Do plantão até a gestão">
+  <meta property="og:description" content="Mentoria em grupo de 6 semanas, ao vivo, para corretores que querem vender mais e crescer até coordenador ou gerente. Turma fundadora com vagas limitadas.">
+  <!-- Ao publicar, troque pelo endereço completo (ex.: https://rotadogestor.netlify.app/assets/og-image.jpg) — o WhatsApp exige URL absoluta -->
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Rota do Gestor: mentoria com Guerra, do plantão até a gestão">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="assets/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/foto-topo.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    (function (d) {
+      var r = d.documentElement;
+      r.classList.add('js');
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+        r.classList.add('motion');
+        // Se o JS principal não carregar, nada fica escondido
+        setTimeout(function () { if (!window.__rgReady) r.classList.remove('motion'); }, 2500);
+      }
+    })(document);
+  </script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Ícones (reaproveitados em toda a página) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-rota" viewBox="0 0 32 32" fill="none">
+        <circle cx="7" cy="25" r="3.4" fill="currentColor"/>
+        <path d="M10.5 23c5-1.6 3-6.6 7.8-7.6 4.2-.9 6.2-1.6 6.2-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-dasharray=".1 4.4"/>
+        <path d="M24.5 12V2.8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M24.5 2.8l6 2.9-6 2.9z" fill="currentColor"/>
+      </symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.59-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.69.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12.05 21.78h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.89 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.9a11.82 11.82 0 0 0-3.48-8.41z"/>
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12.5l4.5 4.5L19 7.5"/>
+      </symbol>
+      <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <path d="M7 7l10 10M17 7L7 17"/>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M13 6l6 6-6 6"/>
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+        <path d="M12 5v14M5 12h14"/>
+      </symbol>
+      <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/>
+      </symbol>
+      <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2.5" y="6" width="13" height="12" rx="3"/><path d="M15.5 10.2 21 7.5v9l-5.5-2.7z"/>
+      </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.6 6.5-5.6s5.9 2 6.5 5.6"/><circle cx="17" cy="9" r="2.6"/><path d="M16.4 14.5c2.7.2 4.5 2.1 5.1 5.5"/>
+      </symbol>
+      <symbol id="i-rec" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9.5"/><path d="M10 8.5l5.5 3.5-5.5 3.5z" fill="currentColor"/>
+      </symbol>
+      <symbol id="i-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="8" width="18" height="5" rx="1.5"/><path d="M5 13v7.5h14V13M12 8v12.5M12 8c-1.6-3.6-5.6-4.6-6.1-2.1S9 8 12 8zm0 0c1.6-3.6 5.6-4.6 6.1-2.1S15 8 12 8z"/>
+      </symbol>
+      <symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 21V3.5M5 4h12.5l-2.5 4.25 2.5 4.25H5"/>
+      </symbol>
+      <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 2.5h8.5L19 7v14.5H6z"/><path d="M14 2.5V7h5M9 12h7M9 16h5"/>
+      </symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 5.5h16v10H9.5L5 19.5v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/>
+      </symbol>
+      <symbol id="i-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 3.5h10v5a5 5 0 0 1-10 0z"/><path d="M7 5.5H3.5v1.5A3.5 3.5 0 0 0 7 10.5M17 5.5h3.5v1.5a3.5 3.5 0 0 1-3.5 3.5M12 13.5v3.5M8 20.5h8M9.5 17h5v3.5h-5z"/>
+      </symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r=".9" fill="currentColor" stroke="none"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ================= TOPO ================= -->
+  <header class="topbar">
+    <div class="wrap topbar__in">
+      <a class="brand" href="#topo" aria-label="Rota do Gestor, voltar ao topo">
+        <svg aria-hidden="true"><use href="#i-rota"/></svg>
+        <span>Rota do Gestor</span>
+      </a>
+      <a class="topbar__cta" href="https://wa.me/5511945913535?text=Quero%20saber%20da%20Rota%20do%20Gestor" target="_blank" rel="noopener" aria-label="Quero minha vaga (abre o WhatsApp)">
+        <svg aria-hidden="true"><use href="#i-wa"/></svg><span>Quero minha vaga</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="topo">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <svg class="hero__route" viewBox="0 0 600 700" fill="none" preserveAspectRatio="xMidYMid slice">
+          <path d="M-20 690C120 640 60 520 200 470s260 40 300-110-90-190 40-330" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 12"/>
+        </svg>
+      </div>
+
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <div class="who rise" style="--d:0">
+            <span class="avatar"><img src="assets/foto-topo.jpg" alt="" width="704" height="704"></span>
+            <span class="who__text">
+              <strong>com Guerra</strong>
+              <span>Gerente de vendas · @guerragestor</span>
+            </span>
+          </div>
+
+          <p class="eyebrow rise" style="--d:1"><span class="dot" aria-hidden="true"></span> Mentoria em grupo · Turma fundadora</p>
+
+          <h1 id="hero-title" class="h1 rise" style="--d:2">
+            Venda mais agora e trace o caminho <span class="gold-text">do plantão até a gestão.</span>
+          </h1>
+
+          <p class="lead rise" style="--d:3">
+            <strong>6 semanas ao vivo</strong> com quem começou no plantão, virou gerente de vendas e já treinou <strong>mais de 200 corretores</strong> no Minha Casa Minha Vida.
+          </p>
+
+          <div class="rise" style="--d:4">
+            <a id="cta-topo" class="btn" href="https://wa.me/5511945913535?text=Quero%20saber%20da%20Rota%20do%20Gestor" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-wa"/></svg>
+              Quero entrar na Rota
+            </a>
+            <p class="micro">Tire suas dúvidas no WhatsApp · <span class="nowrap" data-vagas>Vagas limitadas</span></p>
+          </div>
+        </div>
+
+        <figure class="hero__media rise" style="--d:3">
+          <div class="arch media" data-file="foto-topo.jpg">
+            <img src="assets/foto-topo.jpg" alt="Gabriel Guerra, gerente de vendas no mercado imobiliário, de blazer cinza" width="704" height="704" fetchpriority="high" onerror="this.parentNode.classList.add('is-missing')">
+          </div>
+          <div class="chip chip--a">
+            <strong>5 anos</strong>
+            <span>do plantão<br>à gerência</span>
+          </div>
+          <div class="chip chip--b">
+            <strong>+200</strong>
+            <span>corretores<br>treinados</span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Faixa com o formato -->
+    <div class="ticker" aria-label="Formato da mentoria">
+      <div class="ticker__track">
+        <ul class="ticker__group">
+          <li>6 semanas ao vivo</li>
+          <li>Google Meet</li>
+          <li>Grupo no WhatsApp</li>
+          <li>Gravações por 90 dias</li>
+          <li>Turma fundadora</li>
+        </ul>
+        <ul class="ticker__group" aria-hidden="true">
+          <li>6 semanas ao vivo</li>
+          <li>Google Meet</li>
+          <li>Grupo no WhatsApp</li>
+          <li>Gravações por 90 dias</li>
+          <li>Turma fundadora</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ================= DORES ================= -->
+    <section class="section section--light" aria-labelledby="dores-title">
+      <div class="wrap">
+        <p class="kicker reveal">Seja sincero</p>
+        <h2 id="dores-title" class="h2 reveal">Você sente que está parado no plantão?</h2>
+        <p class="sub reveal">Se você já pensou alguma dessas frases, essa mentoria foi feita pra você:</p>
+
+        <ul class="pains">
+          <li class="pain reveal"><span class="pain__icon" aria-hidden="true"><svg><use href="#i-x"/></svg></span><p>“Passo o dia inteiro no plantão e volto pra casa sem vender nada.”</p></li>
+          <li class="pain reveal" style="--d:1"><span class="pain__icon" aria-hidden="true"><svg><use href="#i-x"/></svg></span><p>“Atendo bem, mas travo quando o cliente fala <b>tá caro</b> ou <b>vou pensar</b>.”</p></li>
+          <li class="pain reveal"><span class="pain__icon" aria-hidden="true"><svg><use href="#i-x"/></svg></span><p>“Um mês eu vendo, no outro zero. Não tenho uma rotina que funcione.”</p></li>
+          <li class="pain reveal" style="--d:1"><span class="pain__icon" aria-hidden="true"><svg><use href="#i-x"/></svg></span><p>“Vejo colega sendo promovido e não entendo o que ele fez de diferente.”</p></li>
+          <li class="pain reveal"><span class="pain__icon" aria-hidden="true"><svg><use href="#i-x"/></svg></span><p>“Quero ser coordenador ou gerente, mas ninguém me mostra o caminho.”</p></li>
+          <li class="pain reveal" style="--d:1"><span class="pain__icon" aria-hidden="true"><svg><use href="#i-x"/></svg></span><p>“Parece que minha venda depende da sorte e do lead que cai no meu colo.”</p></li>
+        </ul>
+
+        <div class="turn reveal">
+          <p class="turn__big">Não é falta de vontade.<br><span class="gold-text">É falta de rota.</span></p>
+          <p class="turn__small">A boa notícia: esse caminho tem mapa. E eu já percorri cada trecho dele.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HISTÓRIA ================= -->
+    <section class="section" aria-labelledby="historia-title">
+      <div class="wrap story">
+        <figure class="story__media reveal">
+          <div class="frame media" data-file="foto-historia.jpg">
+            <img src="assets/foto-historia.jpg" alt="Guerra, gerente de vendas e mentor da Rota do Gestor" width="704" height="704" loading="lazy" decoding="async" onerror="this.parentNode.classList.add('is-missing')">
+          </div>
+          <figcaption class="story__tag">
+            <svg aria-hidden="true"><use href="#i-rota"/></svg>
+            <span><strong>Gabriel Guerra</strong>Gerente de vendas</span>
+          </figcaption>
+        </figure>
+
+        <div class="story__text">
+          <p class="kicker reveal">Minha história</p>
+          <h2 id="historia-title" class="h2 reveal">Eu já estive <span class="gold-text">no seu lugar.</span></h2>
+
+          <div class="prose reveal">
+            <p>Comecei como corretor, no plantão, igual a você. Sei como é passar o dia esperando cliente, ouvir “vou pensar” e não saber se o mês vai fechar.</p>
+            <p>Em 5 anos, saí do plantão pra gerência de vendas. No caminho, liderei equipes e treinei <strong>mais de 200 corretores e corretoras</strong> no Minha Casa Minha Vida.</p>
+            <p>E o que mais me orgulha não é o meu cargo: é ver gente que eu treinei virando <strong>coordenador e gerente</strong> também.</p>
+            <p>A Rota do Gestor é o que eu queria que alguém tivesse me mostrado lá no começo. Sem fórmula mágica e sem papo de coach: rotina, técnica e a visão de quem vive a venda todo dia.</p>
+          </div>
+
+          <ol class="timeline reveal" aria-label="Minha trajetória">
+            <li><strong>Corretor de plantão</strong><span>Onde tudo começou.</span></li>
+            <li><strong>Líder de equipe</strong><span>Liderei equipes de vendas.</span></li>
+            <li><strong>Gerente de vendas</strong><span>5 anos depois do primeiro plantão.</span></li>
+            <li class="is-now"><strong>Formando líderes</strong><span>+200 treinados. Alguns já são coordenadores e gerentes.</span></li>
+          </ol>
+
+          <blockquote class="quote reveal">
+            <p>Músico, gerente de vendas e alguém que realmente se importa com as pessoas.</p>
+            <footer>Guerra</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MÓDULOS ================= -->
+    <section class="section section--route" aria-labelledby="modulos-title">
+      <div class="wrap">
+        <div class="center">
+          <p class="kicker reveal">O que você vai aprender</p>
+          <h2 id="modulos-title" class="h2 reveal">6&nbsp;semanas. 6&nbsp;paradas. <span class="gold-text">Uma rota.</span></h2>
+          <p class="sub reveal">Cada semana é uma parada: um encontro ao vivo com conteúdo prático pra você aplicar no plantão no dia seguinte.</p>
+        </div>
+
+        <div class="route-wrap">
+          <span class="route__fill" aria-hidden="true"></span>
+          <ol class="route">
+            <li class="stop">
+              <span class="stop__node" aria-hidden="true">01</span>
+              <div class="stop__card">
+                <span class="stop__week">Semana 1</span>
+                <h3>Diagnóstico e mapa de carreira</h3>
+                <p>Onde você está hoje, onde quer chegar e o que falta pra chegar lá. Nada de achismo: um plano no papel.</p>
+                <span class="badge"><svg aria-hidden="true"><use href="#i-doc"/></svg> Entregável: seu Plano de Desenvolvimento Individual (PDI)</span>
+              </div>
+            </li>
+            <li class="stop">
+              <span class="stop__node" aria-hidden="true">02</span>
+              <div class="stop__card">
+                <span class="stop__week">Semana 2</span>
+                <h3>Performance, rotina e funil de vendas</h3>
+                <p>A rotina que faz você vender todo mês, e não só no mês de sorte. Prospecção, follow-up e os números do seu funil pra saber onde ajustar.</p>
+              </div>
+            </li>
+            <li class="stop">
+              <span class="stop__node" aria-hidden="true">03</span>
+              <div class="stop__card">
+                <span class="stop__week">Semana 3</span>
+                <h3>Negociação e quebra da objeção de preço</h3>
+                <p>Como conduzir a negociação e responder o “tá caro” e o “vou pensar” sem baixar a cabeça, nem o preço.</p>
+              </div>
+            </li>
+            <li class="stop">
+              <span class="stop__node" aria-hidden="true">04</span>
+              <div class="stop__card">
+                <span class="stop__week">Semana 4</span>
+                <h3>Liderança sem cargo</h3>
+                <p>Como virar referência na equipe antes mesmo da promoção: ajudar, puxar o time e ser lembrado quando surgir a vaga.</p>
+              </div>
+            </li>
+            <li class="stop">
+              <span class="stop__node" aria-hidden="true">05</span>
+              <div class="stop__card">
+                <span class="stop__week">Semana 5</span>
+                <h3>Visão de gestor: metas, reuniões e gamificação</h3>
+                <p>Por dentro da cabeça do gerente: como nascem as metas, como conduzir uma reunião que funciona e como usar competições pra engajar o time.</p>
+              </div>
+            </li>
+            <li class="stop">
+              <span class="stop__node" aria-hidden="true">06</span>
+              <div class="stop__card">
+                <span class="stop__week">Semana 6</span>
+                <h3>Marca pessoal e como conquistar a promoção</h3>
+                <p>Como ser visto, dentro e fora da empresa, e como se posicionar pra conquistar o próximo cargo.</p>
+              </div>
+            </li>
+            <li class="stop stop--end">
+              <span class="stop__node" aria-hidden="true"><svg><use href="#i-flag"/></svg></span>
+              <div class="stop__dest">
+                <span class="stop__week">Destino</span>
+                <strong>A gestão</strong>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <!-- Como funciona -->
+        <div class="howto">
+          <h3 class="howto__title reveal">Como funciona</h3>
+          <ul class="format">
+            <li class="format__item reveal">
+              <span class="format__icon" aria-hidden="true"><svg><use href="#i-video"/></svg></span>
+              <strong>Ao vivo no Google Meet</strong>
+              <span>1 encontro por semana, com tempo pra tirar dúvida na hora.</span>
+            </li>
+            <li class="format__item reveal" style="--d:1">
+              <span class="format__icon" aria-hidden="true"><svg><use href="#i-cal"/></svg></span>
+              <strong>6 semanas</strong>
+              <span>No ritmo de quem trabalha no plantão.</span>
+            </li>
+            <li class="format__item reveal">
+              <span class="format__icon" aria-hidden="true"><svg><use href="#i-users"/></svg></span>
+              <strong>Grupo no WhatsApp</strong>
+              <span>Troca com a turma e comigo durante a mentoria.</span>
+            </li>
+            <li class="format__item reveal" style="--d:1">
+              <span class="format__icon" aria-hidden="true"><svg><use href="#i-rec"/></svg></span>
+              <strong>Gravações por 90 dias</strong>
+              <span>Perdeu um encontro? Assista depois, quantas vezes quiser.</span>
+            </li>
+          </ul>
+          <p class="howto__when reveal"><svg aria-hidden="true"><use href="#i-cal"/></svg><span>Encontros ao vivo <span data-horario>com dia e horário informados no WhatsApp</span>.</span></p>
+
+          <div class="center reveal">
+            <a class="btn" href="https://wa.me/5511945913535?text=Quero%20saber%20da%20Rota%20do%20Gestor" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-wa"/></svg>
+              Quero trilhar essa rota
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PARA QUEM É ================= -->
+    <section class="section section--light" aria-labelledby="pra-quem-title">
+      <div class="wrap">
+        <div class="center">
+          <p class="kicker reveal">Antes de entrar</p>
+          <h2 id="pra-quem-title" class="h2 reveal">Essa mentoria é pra você?</h2>
+        </div>
+
+        <div class="fit">
+          <div class="fit__card fit__card--yes reveal">
+            <h3>É pra você se…</h3>
+            <ul>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Tem de <b>6 meses a 3 anos</b> de mercado imobiliário.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Quer vender mais <b>agora</b>, não daqui a um ano.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Quer crescer pra <b>coordenador(a) ou gerente</b>.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Topa aplicar o que aprender, e não só assistir.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Quer aprender com quem vive a venda no dia a dia, não com teoria.</span></li>
+            </ul>
+          </div>
+          <div class="fit__card fit__card--no reveal" style="--d:1">
+            <h3>Não é pra você se…</h3>
+            <ul>
+              <li><svg aria-hidden="true"><use href="#i-x"/></svg><span>Procura fórmula mágica ou venda sem esforço.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-x"/></svg><span>Quer só motivação, sem ferramenta prática.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-x"/></svg><span>Não está disposto(a) a mudar a sua rotina.</span></li>
+              <li><svg aria-hidden="true"><use href="#i-x"/></svg><span>Acha que já sabe tudo sobre vendas.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BÔNUS ================= -->
+    <section class="section" aria-labelledby="bonus-title">
+      <div class="wrap">
+        <div class="center">
+          <p class="kicker reveal">Bônus inclusos</p>
+          <h2 id="bonus-title" class="h2 reveal">E você ainda leva <span class="gold-text">2 ferramentas prontas</span></h2>
+        </div>
+
+        <div class="bonus">
+          <article class="ticket reveal">
+            <div class="ticket__head">
+              <span class="ticket__label">Bônus 01</span>
+              <span class="ticket__icon" aria-hidden="true"><svg><use href="#i-chat"/></svg></span>
+            </div>
+            <h3>Kit de scripts de vendas</h3>
+            <p>Mensagens e falas prontas pra abordagem, follow-up, agendamento de visita e resposta às objeções mais comuns. É copiar, adaptar e usar.</p>
+          </article>
+          <article class="ticket reveal" style="--d:1">
+            <div class="ticket__head">
+              <span class="ticket__label">Bônus 02</span>
+              <span class="ticket__icon" aria-hidden="true"><svg><use href="#i-trophy"/></svg></span>
+            </div>
+            <h3>Modelo de competição de vendas</h3>
+            <p>Regras, pontuação e premiação prontas pra rodar uma competição que engaja o time. Leve pro seu gerente e mostre visão de líder antes do cargo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PREÇO ================= -->
+    <section id="preco" class="section pricing" aria-labelledby="preco-title" data-hide-sticky>
+      <div class="wrap">
+        <div class="center">
+          <p class="kicker reveal">Investimento</p>
+          <h2 id="preco-title" class="h2 reveal">Garanta sua vaga na <span class="gold-text">turma fundadora</span></h2>
+        </div>
+
+        <div class="price-card reveal">
+          <div class="price-card__in">
+            <span class="tag">Turma fundadora</span>
+            <h3>Rota do Gestor</h3>
+            <p class="price-card__sub">Mentoria em grupo · 6 semanas ao vivo</p>
+
+            <ul class="includes">
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>6 encontros ao vivo pelo Google Meet</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Grupo exclusivo no WhatsApp</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Gravações disponíveis por 90 dias</span></li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Seu Plano de Desenvolvimento Individual (PDI)</span></li>
+              <li class="is-bonus"><svg aria-hidden="true"><use href="#i-gift"/></svg><span><b>Bônus:</b> Kit de scripts de vendas</span></li>
+              <li class="is-bonus"><svg aria-hidden="true"><use href="#i-gift"/></svg><span><b>Bônus:</b> Modelo de competição de vendas</span></li>
+            </ul>
+
+            <div class="price">
+              <p class="price__small">Condição da turma fundadora</p>
+              <p class="price__big" aria-label="12 parcelas de 39 reais">
+                <span class="price__x">12x</span><span class="price__cur">R$</span><span class="price__num">39</span>
+              </p>
+              <p class="price__cash">ou <b>R$ 397</b> à vista</p>
+            </div>
+
+            <div class="scarcity">
+              <span class="pill"><svg aria-hidden="true"><use href="#i-users"/></svg><span data-vagas>Vagas limitadas</span></span>
+              <span class="pill"><svg aria-hidden="true"><use href="#i-cal"/></svg><span data-inicio>Início em breve</span></span>
+            </div>
+
+            <a class="btn btn--block" href="https://wa.me/5511945913535?text=Quero%20saber%20da%20Rota%20do%20Gestor" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-wa"/></svg>
+              Garantir minha vaga
+            </a>
+            <p class="micro">Você é atendido no WhatsApp e tira todas as dúvidas antes de fechar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section section--light" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="center">
+          <p class="kicker reveal">Dúvidas</p>
+          <h2 id="faq-title" class="h2 reveal">Perguntas frequentes</h2>
+        </div>
+
+        <div class="faq">
+          <details name="faq" class="reveal">
+            <summary>Tenho pouco tempo de mercado. A mentoria serve pra mim?<span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary>
+            <p>Se você tem de 6 meses a 3 anos de mercado, ela foi pensada exatamente pra você. Se está começando agora, me chama no WhatsApp que eu te digo com sinceridade se é o momento certo.</p>
+          </details>
+          <details name="faq" class="reveal">
+            <summary>E se eu não conseguir assistir a algum encontro ao vivo?<span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary>
+            <p>Tranquilo. Todos os encontros ficam gravados e disponíveis por 90 dias, e as dúvidas você manda no grupo do WhatsApp.</p>
+          </details>
+          <details name="faq" class="reveal">
+            <summary>Trabalho fora do Minha Casa Minha Vida. Vale a pena?<span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary>
+            <p>Minha experiência é no MCMV, então muitos exemplos vêm de lá. Mas rotina, funil, negociação, liderança e marca pessoal servem pra qualquer segmento de imóveis.</p>
+          </details>
+          <details name="faq" class="reveal">
+            <summary>A mentoria garante que eu vou ser promovido?<span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary>
+            <p>Não, e desconfie de quem promete isso. Promoção depende de você, da empresa e do momento. O que você leva é um plano claro (seu PDI), ferramentas práticas e a visão de quem já está na gestão, que é o que faz diferença quando a oportunidade aparece.</p>
+          </details>
+          <details name="faq" class="reveal">
+            <summary>Como faço pra garantir minha vaga e pagar?<span class="faq__icon" aria-hidden="true"><svg><use href="#i-plus"/></svg></span></summary>
+            <p>Toque em qualquer botão desta página e fale comigo no WhatsApp. Lá eu tiro suas dúvidas e te passo o pagamento: R$ 397 à vista ou 12x de R$ 39.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CHAMADA FINAL ================= -->
+    <section class="section final" aria-labelledby="final-title" data-hide-sticky>
+      <div class="wrap center">
+        <span class="avatar avatar--lg reveal"><img src="assets/foto-topo.jpg" alt="" width="704" height="704" loading="lazy" decoding="async"></span>
+        <h2 id="final-title" class="h2 reveal">O plantão pode ser só o <span class="gold-text">começo da sua rota.</span></h2>
+        <p class="sub reveal">Daqui a 6 semanas você pode continuar no mesmo lugar, ou ter um plano claro pra vender mais e crescer até a gestão. A escolha é sua.</p>
+        <div class="reveal">
+          <a class="btn" href="https://wa.me/5511945913535?text=Quero%20saber%20da%20Rota%20do%20Gestor" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-wa"/></svg>
+            Quero garantir minha vaga
+          </a>
+          <p class="micro"><span class="nowrap" data-vagas>Vagas limitadas</span> · <span class="nowrap" data-inicio>Início em breve</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" data-hide-sticky>
+    <div class="wrap footer__in">
+      <a class="brand" href="#topo" aria-label="Rota do Gestor, voltar ao topo">
+        <svg aria-hidden="true"><use href="#i-rota"/></svg>
+        <span>Rota do Gestor</span>
+      </a>
+      <p>Gabriel Guerra · CRECI 267059-F</p>
+      <a class="footer__ig" href="https://www.instagram.com/guerragestor/" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-ig"/></svg> @guerragestor
+      </a>
+      <p class="footer__copy">© <span class="js-year">2026</span> Rota do Gestor. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Barra fixa de CTA (celular) -->
+  <div class="sticky-cta" aria-hidden="true" inert>
+    <div class="sticky-cta__info">
+      <small>Turma fundadora</small>
+      <strong>12x de R$ 39</strong>
+    </div>
+    <a class="btn" href="https://wa.me/5511945913535?text=Quero%20saber%20da%20Rota%20do%20Gestor" target="_blank" rel="noopener">
+      <svg aria-hidden="true"><use href="#i-wa"/></svg>
+      Garantir vaga
+    </a>
+  </div>
+
+</body>
+</html>
